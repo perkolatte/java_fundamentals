@@ -1,6 +1,8 @@
 package fundamentals.labs;
 
 import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * Fundamentals Exercise 5: Days to seconds
@@ -24,7 +26,15 @@ public class Exercise_05 {
         int days = scanner.nextInt();
 
         // write completed code here
+        long seconds = days * 86400;
+        
+        NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
 
+        if (days == 1) {
+            System.out.println("There are " + numberFormat.format(seconds) + " seconds in " + numberFormat.format(days) + " day.");
+        } else {
+            System.out.println("There are " + numberFormat.format(seconds) + " seconds in " + numberFormat.format(days) + " days.");
+        }
 
         // testing change 2
 
