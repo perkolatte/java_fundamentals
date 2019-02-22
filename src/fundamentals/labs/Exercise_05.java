@@ -27,7 +27,7 @@ public class Exercise_05 {
 
         // write completed code here
         long seconds = days * 86400;
-        
+
         NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
 
         if (days == 1) {
