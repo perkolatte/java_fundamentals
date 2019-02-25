@@ -17,7 +17,15 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
+        int interrible = 666;
+        double dubblebubble = 42.333;
+        float noDrowning = 56.7f;
+        char charcoal = 'C';
 
+        System.out.println("interrible = " + interrible);
+        System.out.println("dubblebubble = " + dubblebubble);
+        System.out.println("noDrowning = " + noDrowning);
+        System.out.println("charcoal = " + charcoal);
     }
 }
 
