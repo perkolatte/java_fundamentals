@@ -1,6 +1,6 @@
 package fundamentals.labs;
 
-import static java.lang.Math.PI;
+//import static java.lang.Math.PI;
 
 /**
  * Fundamentals Exercise 4: Volume and Surface Area
@@ -18,7 +18,7 @@ public class Exercise_04 {
         float r = 3.14f;
         int h = 5;
 
-        double area = PI * Math.pow(r, 2) * h;
+        double area = Math.PI * Math.pow(r, 2) * h;
 
         System.out.println(area);
     }
