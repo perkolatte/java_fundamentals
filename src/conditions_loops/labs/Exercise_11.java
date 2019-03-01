@@ -20,4 +20,40 @@ package conditions_loops.labs;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 10; i++) {
+
+            for (int j = 1; j <=10; j++) {
+
+                int product = i * j;
+                int numberOfDigits = Integer.toString(product).length();
+                System.out.print(product);
+
+                if (j != 10) {
+                    switch (numberOfDigits) {
+                        case 1:
+                            System.out.print(" |");
+                            break;
+                        case 2:
+                            System.out.print("|");
+                            break;
+                    }
+                } else {
+                    switch (numberOfDigits) {
+                        case 2:
+                            System.out.print(" |");
+                            break;
+                        case 3:
+                            System.out.print("|");
+                            break;
+                    }
+                }
+            }
+
+            System.out.println();
+
+        }
+
+    }
 }

@@ -8,4 +8,18 @@ package conditions_loops.labs;
  */
 
 public class Exercise_09 {
+
+    public static void main(String[] args) {
+
+        for (int i = 10; i > 0; i--) {
+
+            if (i == 5) {
+                System.out.println("Loop exited at halfway point!");
+                break;
+            }
+
+        }
+
+    }
+
 }

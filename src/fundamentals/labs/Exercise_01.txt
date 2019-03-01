@@ -30,11 +30,15 @@ Fundamentals Exercise 1: CLI
             mkdir aNewFolder
 
      6. Copy a file from Terminal_testing to the new folder
+<<<<<<< HEAD
             cp meThree.txt aNewFolder
 
      7. Move a different file from Terminal testing to the new folder
             mv meToo.txt aNewFolder/
 
+=======
+     7. Move a different file from Terminal_testing to the new folder
+>>>>>>> d6c6201d1b29a96fc9a852605a025b2e93157cbc
      8. Demonstrate removing:
          a. A file
             rm meThree.txt
