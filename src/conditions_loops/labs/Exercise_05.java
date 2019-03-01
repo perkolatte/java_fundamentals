@@ -1,5 +1,7 @@
 package conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 5: Calculator
  *
@@ -16,4 +18,67 @@ package conditions_loops.labs;
  */
 
 public class Exercise_05 {
+
+    public static void main(String[] args) {
+
+        Scanner userInput = new Scanner(System.in);
+        boolean userWishesToGoAgain = false;
+
+        do {
+
+            int low = 0;
+            int high = 0;
+            boolean entryIsInvalid = true;
+
+            while (entryIsInvalid) {
+                System.out.print("Please enter a number: ");
+                low = userInput.nextInt();
+
+                System.out.print("Please enter another number which is greater than the first: ");
+                high = userInput.nextInt();
+
+                if (high <= low) {
+                    System.out.println("Invalid entry. The second number must be larger than the first. Please try again.");
+                } else {
+                    entryIsInvalid = false;
+                }
+            }
+
+
+            int sum = 0;
+            int numberOfNumbers = 0;
+
+            for (int i = low; i <= high; i++) {
+                sum += i;
+                numberOfNumbers++;
+            }
+
+            double average = (double) sum / numberOfNumbers;
+
+            System.out.println("The sum is: " + sum);
+            System.out.println("The average is: " + average);
+
+            boolean choiceIsInvalid = false;
+
+            do {
+                System.out.print("Go again? (y or n): ");
+                String choice = userInput.next();
+                switch (choice) {
+                    case "y":
+                        userWishesToGoAgain = false;
+                        break;
+                    case "n":
+                        userWishesToGoAgain = false;
+                        break;
+                    default:
+                        System.out.println("Invalid entry. Please try again.");
+                        choiceIsInvalid = true;
+                }
+            } while (choiceIsInvalid);
+
+        } while (userWishesToGoAgain);
+
+        System.out.println("Ok! Have an interesting day! Buh bye now!");
+    }
+
 }
