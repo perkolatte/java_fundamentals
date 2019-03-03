@@ -20,5 +20,30 @@ public class Exercise_03 {
     public static void main(String[] args) {
 
         int[][] twoDArray = new int[5][5];
+        int value = 3;
+
+        for (int y = 0; y < twoDArray.length; y++) {
+
+            for (int x = 0; x < twoDArray[y].length; x++) {
+
+                twoDArray[y][x] = value;
+                value += 3;
+
+            }
+
+        }
+
+        for (int[] row : twoDArray) {
+
+            for (int multipleOf3 : row) {
+
+                System.out.print(multipleOf3 + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
     }
 }

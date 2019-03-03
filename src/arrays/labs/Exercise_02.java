@@ -1,5 +1,8 @@
 package arrays.labs;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /**
  *  More arrays
  *
@@ -15,7 +18,18 @@ public class Exercise_02 {
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         // write code here
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Please enter a number from 1-10: ");
+        int number = userInput.nextInt();
 
+        for (int i = 0; i < array.length; i++) {
+
+            if (array[i] == number) {
+                System.out.println("The number " + number + " is located at index " + i + ".");
+                break;
+            }
+
+        }
 
     }
 }
