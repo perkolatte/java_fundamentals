@@ -4,11 +4,11 @@ import java.util.HashMap;
 
 public class Galley {
 
-    boolean inFlightMealServed;
+    private boolean inFlightMealServed;
 
-    int numCrewSeats;
+    private int numCrewSeats;
 
-    HashMap<String, Float> menu = new HashMap<String, Float>();
+    private HashMap<String, Float> menu = new HashMap<String, Float>();
 
     public Galley(boolean inFlightMealServed, int numCrewSeats) {
 

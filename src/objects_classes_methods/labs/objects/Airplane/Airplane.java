@@ -13,6 +13,9 @@ public class Airplane {
     PassengerCabin passengerCabin;
     Propulsion propulsion;
 
+    public Airplane() {
+    }
+
     public Airplane(String model, String airline, double fuelCapacityInLitres, double currentFuelLevelInLitres, Bathroom bathroom, Galley galley, PassengerCabin passengerCabin, Propulsion propulsion) {
         this.model = model;
         this.airline = airline;
