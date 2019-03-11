@@ -10,11 +10,25 @@ package labs_examples.objects_classes_methods.labs.methods;
 public class Exercise_04 {
 
     public static void main(String[] args) {
-//        int x = factorial(5);
-//        System.out.println(x);
+        int number = 5;
+        int x = factorial(number);
+        System.out.println("Factorial " + number + " is equal to " + x + ".");
     }
 
+    private static int factorial(int number) {
 
+        int factorialInProgress;
+
+        while (number != 1) {
+
+            factorialInProgress = number * factorial(number - 1);
+            return factorialInProgress;
+
+        }
+
+        return 1;
+
+    }
 
 
 }

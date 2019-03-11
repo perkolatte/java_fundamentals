@@ -18,7 +18,7 @@ Fundamentals Exercise 1: CLI
 
          c. list the contents of the folder
                 ls -al
-                total 0
+                totalNumSeats 0
                 drwxr-xr-x  5 iisaacson  staff  160 Feb 20 09:26 .
                 drwxr-xr-x  7 iisaacson  staff  224 Feb 20 09:24 ..
                 -rw-r--r--  1 iisaacson  staff    0 Feb 20 09:24 imATextFile.txt

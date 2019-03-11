@@ -2,21 +2,24 @@ package objects_classes_methods.labs.objects.Airplane;
 
 public class PassengerCabin {
 
-    int total;
-    int numBusinessClass;
-    int numEconomyClass;
+    private int totalNumSeats;
+    private int numBusinessClass;
+    private int numEconomyClass;
 
-    int numAisles;
+    private int numAisles;
 
-    double overheadCargoCapacity;
+    private double overheadCargoCapacity;
 
-    public PassengerCabin(int total,
+    public PassengerCabin() {
+    }
+
+    public PassengerCabin(int totalNumSeats,
                           int numBusinessClass,
                           int numEconomyClass,
                           int numAisles,
                           double overheadCargoCapacity) {
 
-        this.total = total;
+        this.totalNumSeats = totalNumSeats;
         this.numBusinessClass = numBusinessClass;
         this.numEconomyClass = numEconomyClass;
         this.numAisles = numAisles;
@@ -27,7 +30,7 @@ public class PassengerCabin {
     @Override
     public String toString() {
         return "PassengerCabin{" +
-                "total=" + total +
+                "totalNumSeats=" + totalNumSeats +
                 ", numBusinessClass=" + numBusinessClass +
                 ", numEconomyClass=" + numEconomyClass +
                 ", numAisles=" + numAisles +
@@ -35,12 +38,12 @@ public class PassengerCabin {
                 '}';
     }
 
-    public int getTotal() {
-        return total;
+    public int getTotalNumSeats() {
+        return totalNumSeats;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setTotalNumSeats(int totalNumSeats) {
+        this.totalNumSeats = totalNumSeats;
     }
 
     public int getNumBusinessClass() {

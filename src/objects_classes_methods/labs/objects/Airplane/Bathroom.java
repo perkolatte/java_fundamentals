@@ -2,32 +2,30 @@ package objects_classes_methods.labs.objects.Airplane;
 
 public class Bathroom {
 
-    int tpCapacity;
-    int tpRemaining;
+    private int tpCapacity;
+    private int tpRemaining;
 
-    int facialTissueCapacity;
-    int facialTissueRemaining;
+    private int facialTissueCapacity;
+    private int facialTissueRemaining;
 
-    int toiletSeatCoverCapacity;
-    int toiletSeatCoverRemaining;
+    private int toiletSeatCoverCapacity;
+    private int toiletSeatCoverRemaining;
 
-    int handSoapCapacity;
-    int handSoapRemaining;
+    private int handSoapCapacity;
+    private int handSoapRemaining;
 
-    boolean dueForCleaning;
+    private boolean dueForCleaning;
 
-    boolean occupied;
+    private boolean occupied;
 
-    public Bathroom(int tpCapacity,
-                    int facialTissueCapacity,
-                    int toiletSeatCoverCapacity,
-                    int handSoapCapacity) {
+    public Bathroom() {
+    }
 
+    public Bathroom(int tpCapacity, int facialTissueCapacity, int toiletSeatCoverCapacity, int handSoapCapacity) {
         this.tpCapacity = tpCapacity;
         this.facialTissueCapacity = facialTissueCapacity;
         this.toiletSeatCoverCapacity = toiletSeatCoverCapacity;
         this.handSoapCapacity = handSoapCapacity;
-
     }
 
     @Override
@@ -62,6 +60,7 @@ public class Bathroom {
         this.tpRemaining = tpRemaining;
     }
 
+
     public int getFacialTissueCapacity() {
         return facialTissueCapacity;
     }
@@ -77,6 +76,7 @@ public class Bathroom {
     public void setFacialTissueRemaining(int facialTissueRemaining) {
         this.facialTissueRemaining = facialTissueRemaining;
     }
+
 
     public int getToiletSeatCoverCapacity() {
         return toiletSeatCoverCapacity;
@@ -94,6 +94,7 @@ public class Bathroom {
         this.toiletSeatCoverRemaining = toiletSeatCoverRemaining;
     }
 
+
     public int getHandSoapCapacity() {
         return handSoapCapacity;
     }
@@ -110,6 +111,7 @@ public class Bathroom {
         this.handSoapRemaining = handSoapRemaining;
     }
 
+
     public boolean isDueForCleaning() {
         return dueForCleaning;
     }
@@ -117,6 +119,7 @@ public class Bathroom {
     public void setDueForCleaning(boolean dueForCleaning) {
         this.dueForCleaning = dueForCleaning;
     }
+
 
     public boolean isOccupied() {
         return occupied;

@@ -2,8 +2,11 @@ package objects_classes_methods.labs.objects.Airplane;
 
 public class Propulsion {
 
-    int numJets;
-    int numProps;
+    private int numJets;
+    private int numProps;
+
+    public Propulsion() {
+    }
 
     public Propulsion(int numJets, int numProps) {
 

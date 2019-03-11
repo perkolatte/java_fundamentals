@@ -2,11 +2,11 @@ package objects_classes_methods.labs.objects.Airplane;
 
 public class Airplane {
 
-    String model;
-    String airline;
+    private String model;
+    private String airline;
 
-    double fuelCapacityInLitres;
-    double currentFuelLevelInLitres;
+    private double fuelCapacityInLitres;
+    private double currentFuelLevelInLitres;
 
     Bathroom bathroom;
     Galley galley;
@@ -39,6 +39,22 @@ public class Airplane {
                 '}';
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getAirline() {
+        return airline;
+    }
+
+    public void setAirline(String airline) {
+        this.airline = airline;
+    }
+
     public double getFuelCapacity() {
         return fuelCapacityInLitres;
     }
@@ -53,37 +69,5 @@ public class Airplane {
 
     public void setCurrentFuelLevel(double currentFuelLevelInLitres) {
         this.currentFuelLevelInLitres = currentFuelLevelInLitres;
-    }
-
-    public Bathroom getBathroom() {
-        return bathroom;
-    }
-
-    public void setBathroom(Bathroom bathroom) {
-        this.bathroom = bathroom;
-    }
-
-    public Galley getGalley() {
-        return galley;
-    }
-
-    public void setGalley(Galley galley) {
-        this.galley = galley;
-    }
-
-    public PassengerCabin getPassengerCabin() {
-        return passengerCabin;
-    }
-
-    public void setPassengerCabin(PassengerCabin passengerCabin) {
-        this.passengerCabin = passengerCabin;
-    }
-
-    public Propulsion getPropulsion() {
-        return propulsion;
-    }
-
-    public void setPropulsion(Propulsion propulsion) {
-        this.propulsion = propulsion;
     }
 }

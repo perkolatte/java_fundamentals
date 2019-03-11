@@ -10,6 +10,9 @@ public class Galley {
 
     private HashMap<String, Float> menu = new HashMap<String, Float>();
 
+    public Galley() {
+    }
+
     public Galley(boolean inFlightMealServed, int numCrewSeats) {
 
         this.inFlightMealServed = inFlightMealServed;

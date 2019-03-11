@@ -1,7 +1,5 @@
 package objects_classes_methods.labs.objects.Airplane;
 
-import com.sun.xml.internal.ws.api.pipe.Engine;
-
 public class Example {
 
     public static void main(String[] args) {
@@ -15,6 +13,39 @@ public class Example {
         PassengerCabin passengerCabin1 = new PassengerCabin(555, 14, 300, 2, 400.25);
 
         Airplane airBus380 = new Airplane("AirBus A380", "Emirates", 320000, 320000, bathroom1, galley1, passengerCabin1, propulsion1);
+
+
+        System.out.println(airBus380.bathroom.getFacialTissueRemaining());
+        System.out.println(airBus380.bathroom.getFacialTissueCapacity());
+        airBus380.bathroom.setFacialTissueRemaining(10);
+        System.out.println(airBus380.bathroom.getFacialTissueRemaining());
+        System.out.println();
+
+        System.out.println(airBus380.bathroom.toString());
+        System.out.println();
+
+        System.out.println(airBus380.getAirline());
+        System.out.println();
+
+        System.out.println(airBus380.galley.isInFlightMealServed());
+        airBus380.galley.setInFlightMealServed(false);
+        System.out.println(airBus380.galley.isInFlightMealServed());
+        System.out.println();
+
+        System.out.println(airBus380.galley.toString());
+        System.out.println();
+
+        System.out.println(airBus380.passengerCabin.getTotalNumSeats());
+        System.out.println();
+
+        System.out.println(airBus380.passengerCabin.toString());
+        System.out.println();
+
+        System.out.println(airBus380.propulsion.getNumJets());
+        System.out.println();
+
+        System.out.println(airBus380.propulsion.toString());
+        System.out.println();
 
         System.out.println(airBus380.toString());
 
