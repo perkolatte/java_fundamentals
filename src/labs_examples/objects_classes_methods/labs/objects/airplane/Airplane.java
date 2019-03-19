@@ -1,4 +1,4 @@
-package objects_classes_methods.labs.objects.Airplane;
+package labs_examples.objects_classes_methods.labs.objects.airplane;
 
 public class Airplane {
 
@@ -29,7 +29,7 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
+        return "airplane{" +
                 "fuelCapacityInLitres=" + fuelCapacityInLitres +
                 ",\n currentFuelLevelInLitres=" + currentFuelLevelInLitres +
                 ",\n bathroom=" + bathroom +

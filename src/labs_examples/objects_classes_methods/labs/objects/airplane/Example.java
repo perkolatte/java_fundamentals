@@ -1,4 +1,4 @@
-package objects_classes_methods.labs.objects.Airplane;
+package labs_examples.objects_classes_methods.labs.objects.airplane;
 
 public class Example {
 

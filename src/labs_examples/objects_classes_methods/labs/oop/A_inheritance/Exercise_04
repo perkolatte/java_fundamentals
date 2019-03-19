@@ -1,6 +1,7 @@
 
 Without running the code below, please tell me what it will print.
 
+"Parent called" will print, as the Child object, because it was initialized as type Parent, only has access to Parent's methods.
 
 
 public class InheritanceTest
@@ -26,4 +27,3 @@ class Child extends Parent
   {
     System.err.println("Child called");
   }
-}

@@ -3,7 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: Outputa A's print statement, then B, then C. The parent constructor is always called first, as the parent must exist for the child to exist.
  *
  */
 

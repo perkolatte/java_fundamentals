@@ -1,6 +1,6 @@
 package labs_examples.objects_classes_methods.labs.methods;
 
-import objects_classes_methods.labs.objects.Airplane.Bathroom;
+import labs_examples.objects_classes_methods.labs.objects.airplane.Bathroom;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

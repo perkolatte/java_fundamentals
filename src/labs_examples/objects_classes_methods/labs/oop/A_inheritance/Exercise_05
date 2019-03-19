@@ -1,7 +1,9 @@
 
 Without running the code below, please tell me what will print. Why?
 
+"Parent called" will print, as the Child object, because it was initialized as type Parent, only has access to Parent's methods, including constructors.
 
+Hmmm, tested, and apparently both print (Parent, then Child), so the Child constructor is accessible.
 
 
 public class InheritanceTest
