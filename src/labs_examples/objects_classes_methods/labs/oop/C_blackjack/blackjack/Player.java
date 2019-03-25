@@ -1,5 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack.blackjack;
 
+import java.util.Scanner;
+
 public class Player {
 
     int wallet;
@@ -7,7 +9,8 @@ public class Player {
     String name;
     Hand hand = new Hand();;
 
-    public Player() {
+    public Player(String name) {
+        this.name = name;
     }
 
     public Player(int wallet, String name) {
@@ -15,8 +18,26 @@ public class Player {
         this.name = name;
     }
 
-    public boolean computerAI() {
-        return hand.handValue < 16;
+    public boolean computerAIWantsCard() {
+        System.out.println("The dealer's hand is worth " + this.hand.handValue + " and consists of the following cards:");
+        System.out.println(this.hand.toString());
+
+        if (this.hand.handValue < 16) {
+            System.out.println("The dealer deals itself another card.");
+            return true;
+        }
+        System.out.println("The dealer has decided to stay at " + this.hand.handValue + ".");
+        return false;
+    }
+
+    public boolean humanWantsCard() {
+        Scanner playerInput = new Scanner(System.in);
+        System.out.println("Your hand is worth " + this.hand.handValue + " and consists of the following cards:");
+        System.out.println(this.hand.toString());
+
+        System.out.print("Would you like another card? (y or n)");
+        String playerChoice = playerInput.next();
+        return playerChoice.equals("y");
     }
 
     @Override

@@ -3,11 +3,12 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack.blackjack;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Deck {
 
     Card[] cards = new Card[52];
-    ArrayList<Integer> unusedCards = new ArrayList<>(); //
+    ArrayList<Integer> unusedCards = new ArrayList<>();
 
     char[] suits = {'♠', '♦', '♥', '♣'};
 
@@ -51,10 +52,31 @@ public class Deck {
         Random random = new SecureRandom();
 
         int cardIndex = random.nextInt(bound);
+        Card card = this.cards[cardIndex];
+//        int cardIndex = random.nextInt(bound);
 
-        player.hand.cards.add(this.cards[cardIndex]); //
+        if (card.cardValue != 1) {
+            addCardToHand(player, card);
+
+        } else if (player.hand.handValue == 10) { // Blackjack!
+            makeAce11(player, card);
+            addCardToHand(player, card);
+
+        } else {
+            Scanner userInput = new Scanner(System.in);
+            System.out.print("You were dealt an Ace. Would you like it to be worth 1 or 11?");
+            int answer = userInput.nextInt();
+
+            if (answer == 11) {
+                makeAce11(player, card);
+                addCardToHand(player, card);
+            } else {
+                addCardToHand(player, card);
+            }
+        }
+
         this.unusedCards.remove(cardIndex);
-        player.hand.handValue += this.cards[cardIndex].cardValue;
+
 
     }
 
@@ -64,12 +86,14 @@ public class Deck {
         }
     }
 
-//    2) Create a deal() method that will take in a Player object and "deal" that player a random card out of the deck. To get
-//    the random card, generate a random number between 1 and 52 (inclusive). Then check the ArrayList of Integers to make sure
-//    that random number is not in there. If it is, that means the card has already been drawn. You need to generate new random
-//    numbers until you find a card that has not been drawn. If/when the random number has not yet been played add the card at the index
-//    of random num from the Cards[] to the player's "Hand" ArrayList, then add that random number to the ArrayList<Integer>
-//    called unusedCards in the Deck class. This unusedCards arraylist tracks the cards that have already been dealt.
+    public void addCardToHand(Player player, Card card) {
+        player.hand.cards.add(card);
+        player.hand.handValue += card.cardValue;
+    }
+
+    public void makeAce11(Player player, Card card) {
+        card.cardValue = 11;
+    }
 
     @Override
     public String toString() {
