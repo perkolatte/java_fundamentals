@@ -39,6 +39,8 @@ public class BlackjackController {
             if (humanPlayer.humanWantsCard()) {
                 standardDeck.deal(humanPlayer);
             }
+
+
         } while (computerPlayer.hand.isLessThan21() && humanPlayer.hand.isLessThan21());
 
         //Player bust
