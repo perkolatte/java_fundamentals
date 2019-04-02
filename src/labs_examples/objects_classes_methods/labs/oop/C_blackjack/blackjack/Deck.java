@@ -8,9 +8,10 @@ import java.util.Scanner;
 public class Deck {
 
     Card[] cards = new Card[52];
-    ArrayList<Integer> unusedCards = new ArrayList<>();
-
     char[] suits = {'♠', '♦', '♥', '♣'};
+
+    ArrayList<Integer> unusedCards = new ArrayList<>(); // ArrayList of indexes of cards not used
+
 
     public Deck() {
         //card index
@@ -24,16 +25,16 @@ public class Deck {
 
                 switch (v) {
                     case 1:
-                        cards[i] = new Card(v, suits[s], "Ace");
+                        cards[i] = new Card(suits[s], "Ace");
                         break;
                     case 11:
-                        cards[i] = new Card(v, suits[s], "Jack");
+                        cards[i] = new Card(10, suits[s], "Jack");
                         break;
                     case 12:
-                        cards[i] = new Card(v, suits[s], "Queen");
+                        cards[i] = new Card(10, suits[s], "Queen");
                         break;
                     case 13:
-                        cards[i] = new Card(v, suits[s], "King");
+                        cards[i] = new Card(10, suits[s], "King");
                         break;
                     default:
                         cards[i] = new Card(v, suits[s]);
@@ -46,53 +47,40 @@ public class Deck {
 
     }
 
+    /**
+     * This method deals a card to the given player...
+     * @param player
+     */
     public void deal(Player player) {
 
-        int bound = unusedCards.size();
+        int bound = unusedCards.size(); // Current size of ArrayList of indexes of cards not used
         Random random = new SecureRandom();
 
         int cardIndex = random.nextInt(bound);
         Card card = this.cards[cardIndex];
-//        int cardIndex = random.nextInt(bound);
 
-        if (card.cardValue != 1) {
-            addCardToHand(player, card);
+        addCardToHand(player, card);
 
-        } else if (player.hand.handValue == 10) { // Blackjack!
-            makeAce11(player, card);
-            addCardToHand(player, card);
-
-        } else {
-            Scanner userInput = new Scanner(System.in);
-            System.out.print("You were dealt an Ace. Would you like it to be worth 1 or 11?");
-            int answer = userInput.nextInt();
-
-            if (answer == 11) {
-                makeAce11(player, card);
-                addCardToHand(player, card);
-            } else {
-                addCardToHand(player, card);
-            }
-        }
+        player.hand.updateHandValue();
 
         this.unusedCards.remove(cardIndex);
-
 
     }
 
     public void shuffle() {
         for (int i = 0; i < 52; i++) {
             this.unusedCards.add(i);
+            // Add logic to exclude cards already in play
+            // potentially if, say, games played > 0
         }
     }
 
     public void addCardToHand(Player player, Card card) {
-        player.hand.cards.add(card);
-        player.hand.handValue += card.cardValue;
-    }
-
-    public void makeAce11(Player player, Card card) {
-        card.cardValue = 11;
+        if (card.cardName != null && card.cardName.equals("Ace")) {
+            player.hand.aces.add(card); //Fix aces handling
+        } else {
+            player.hand.cards.add(card);
+        }
     }
 
     @Override

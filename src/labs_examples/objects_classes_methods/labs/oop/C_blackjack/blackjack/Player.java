@@ -4,46 +4,64 @@ import java.util.Scanner;
 
 public class Player {
 
-    int wallet;
+    int chips;
 
     String name;
     Hand hand = new Hand();;
+
+    public Player() {
+    }
 
     public Player(String name) {
         this.name = name;
     }
 
-    public Player(int wallet, String name) {
-        this.wallet = wallet;
+    public Player(int chips, String name) {
+        this.chips = chips;
         this.name = name;
     }
 
+    public void startWallet() {
+        Scanner playerInput = new Scanner(System.in);
+        System.out.print("How much money would you like to convert to chips? ");
+        playerInput.nextInt();
+    }
+
     public boolean computerAIWantsCard() {
-        System.out.println("The dealer's hand is worth " + this.hand.handValue + " and consists of the following cards:");
-        System.out.println(this.hand.toString());
+        this.hand.printDealerHand();
+
+        this.hand.updateHandValue();
 
         if (this.hand.handValue < 16) {
             System.out.println("The dealer deals itself another card.");
             return true;
         }
-        System.out.println("The dealer has decided to stay at " + this.hand.handValue + ".");
+//        System.out.println("The dealer has decided to stay at " + this.hand.handValue + ".");
         return false;
     }
 
     public boolean humanWantsCard() {
         Scanner playerInput = new Scanner(System.in);
-        System.out.println("Your hand is worth " + this.hand.handValue + " and consists of the following cards:");
-        System.out.println(this.hand.toString());
-
-        System.out.print("Would you like another card? (y or n)");
+        System.out.print("Would you like to hit? (y or n) ");
         String playerChoice = playerInput.next();
-        return playerChoice.equals("y");
+        if (playerChoice.equals("y")) {
+            System.out.println("You are dealt another card.");
+            return true;
+        } else {
+            this.hand.updateHandValue();
+            System.out.println("You have decided to stay at " + this.hand.handValue + ".");
+            return false;
+        }
+    }
+
+    public void printWallet() {
+        System.out.println("You have " + this.chips + " dollars in chips.");
     }
 
     @Override
     public String toString() {
         return "Player{" +
-                "wallet=" + wallet +
+                "chips=" + chips +
                 ", name='" + name + '\'' +
                 ", hand=" + hand +
                 '}';
