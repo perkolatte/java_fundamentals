@@ -47,7 +47,9 @@ public class Hand {
         System.out.println(this.toString() + "\n");
     }
 
-
+    /**
+     * Creates and prints a version of the dealer's hand which shows the first card dealt as hidden.
+     */
     public void printDealerHand() {
         ArrayList<Card> dealerHandDisplay = new ArrayList<>();
         Card hidden = new Card("hidden");

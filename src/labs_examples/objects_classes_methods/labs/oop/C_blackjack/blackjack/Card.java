@@ -6,7 +6,7 @@ public class Card {
     char suit;
     String cardName;
 
-    public Card(String cardName) {
+    public Card(String cardName) { // dealer hole card
         this.cardName = cardName;
     }
 
@@ -30,7 +30,7 @@ public class Card {
     @Override
     public String toString() {
         if (this.cardName != null) {
-            if (this.cardName.equals("hidden")) { //Bug - fix!
+            if (this.cardName.equals("hidden")) {
                 return "[hidden card]";
             } else {
                 return cardName + " of " + suit;

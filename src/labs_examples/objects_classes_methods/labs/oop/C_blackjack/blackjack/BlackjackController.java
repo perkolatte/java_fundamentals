@@ -6,11 +6,12 @@ public class BlackjackController {
 
     public static void main(String[] args) {
 
-        playBlackjack();
+        BlackjackController game = new BlackjackController();
+        game.playBlackjack();
 
     }
 
-    public static void playBlackjack() {
+    public void playBlackjack() {
 
         Deck standardDeck = new Deck();
 //        boolean dealerContinuesPlaying = true;
@@ -21,6 +22,7 @@ public class BlackjackController {
         Scanner playerInput = new Scanner(System.in);
         System.out.println("Let's play Blackjack!");
         System.out.println("Dealer must draw to 16, and stand on all 17's" + "\n");
+
         System.out.print("What's your name? ");
         String playerName = playerInput.next();
         System.out.println("Hi " + playerName + "!" + "\n");
@@ -108,7 +110,7 @@ public class BlackjackController {
         } while (playerWantsToPlayAgain());
     }
 
-    public static boolean playerWantsToPlayAgain() {
+    public boolean playerWantsToPlayAgain() {
         Scanner playerInput = new Scanner(System.in);
         System.out.print("Play another round? (y or n) ");
         String playerChoice = playerInput.next();
