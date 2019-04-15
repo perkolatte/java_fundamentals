@@ -56,6 +56,7 @@ public class Class1 {
     public void method8A() {
         Class2.method8B();
     }
+
 }
 
 
