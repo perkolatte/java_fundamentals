@@ -7,7 +7,7 @@ package labs_examples.exception_handling.labs;
  *
  */
 
-class tryMultipleCatchExample {
+class TryMultipleCatchExample {
 
     public static void main(String[]args) {
 

@@ -7,7 +7,7 @@ package labs_examples.exception_handling.labs;
  *
  */
 
-class tryCatchExample {
+class TryCatchExample {
 
     public static void main(String[] args) {
 

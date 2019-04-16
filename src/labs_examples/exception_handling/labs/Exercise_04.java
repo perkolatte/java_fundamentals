@@ -7,7 +7,7 @@ package labs_examples.exception_handling.labs;
  *
  */
 
-class tryCatchNestedExample {
+class TryCatchNestedExample {
 
     public static void main(String[]args) {
 
