@@ -34,22 +34,14 @@ class Example_BufferedReaderCypher {
     public static void encryptToNewFile(String source, String target, int offset) {
 
         try (BufferedReader br = new BufferedReader(new FileReader(source));
-             FileOutputStream fos = new FileOutputStream(target)) {
+             FileWriter fos = new FileWriter(target)) {
 
             char[] buffer = new char[1];
             int charsRead = 0;
 
             while (( charsRead = br.read(buffer) ) != -1) {
 
-//                if (buffer[0] == 0x8217) {
-//
-//                    fos.write(buffer[0]);
-//
-//                } else {
-
                     fos.write(buffer[0] + offset);
-
-//                }
 
             }
 
@@ -70,15 +62,8 @@ class Example_BufferedReaderCypher {
 
             while (( charsRead = br.read(buffer) ) != -1) {
 
-//                if (buffer[0] == 0x8217) {
-//
-//                    System.out.println(buffer[0]);
-//
-//                } else {
-
                     System.out.print((char) (buffer[0] - offset));
 
-//                }
             }
 
         } catch (IOException e) {
