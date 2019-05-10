@@ -25,8 +25,8 @@ class CsvParsingExample {
 
         try (BufferedReader br = new BufferedReader(new FileReader(source))) {
 
-            br.readLine();
-            br.readLine();
+            String header1 = br.readLine();
+            String header2 = br.readLine();
 
             String line;
 

@@ -90,8 +90,10 @@ class Exercise_03 {
 
     private static void characterStream1(String source, String target) {
 
+        PrintWriter pW = new PrintWriter(System.out, true);
+
         try (FileReader fR = new FileReader(source);
-             PrintWriter pW = new PrintWriter(new FileWriter(target), true)) { //Breaks when target set to System.out - Why?
+             ) { //Breaks when target set to System.out - Why?
 
             int character;
 
