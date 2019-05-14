@@ -12,9 +12,9 @@ class RunnableExample {
 
     public static void main(String[] args) {
 
-        Runnable1 thread1 = new Runnable1("Thread #1");
+        Runnable1 runnable1 = new Runnable1("Thread #1");
 
-        Runnable1 runnable1 = new Runnable1();
+        Runnable1 runnable2 = new Runnable1();
         Thread thread2 = new Thread(runnable1, "Thread #2");
         thread2.start();
 
@@ -23,6 +23,9 @@ class RunnableExample {
 
         new Thread(new Runnable1(), "Thread #4").start();
 
+        thread3.setPriority(6);
+        thread2.setPriority(4);
+        runnable1.thread.setPriority(1);
     }
 
 }
