@@ -1,7 +1,5 @@
 package labs_examples.multi_threading.labs;
 
-import javax.management.Notification;
-
 /**
  * Multithreading Exercise 5:
  *
@@ -20,6 +18,7 @@ class WaitNotifyExample {
 }
 
 class WaitNotifyRunnable implements Runnable {
+
 
     Thread thread;
     static boolean onlyThread = true;
@@ -42,10 +41,13 @@ class WaitNotifyRunnable implements Runnable {
             if (onlyThread) {
                 onlyThread = false;
 
-                System.out.println(thread.getName() + " waiting...");
 
                 try {
+                    thread.sleep(1000);
+                    System.out.println(thread.getName() + " waiting...");
+                    thread.sleep(1000);
                     monitor.wait();
+                    thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
