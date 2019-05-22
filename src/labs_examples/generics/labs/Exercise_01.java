@@ -8,3 +8,51 @@ package labs_examples.generics.labs;
  *          dynamic usage.
  */
 
+class GenericController {
+
+    public static void main(String[] args) {
+
+        Helper<String, Integer> helper1 = new Helper<>("Thing 1", 1);
+        Helper<String, Integer> helper2 = new Helper<>("Thing 2", 2);
+
+        System.out.println(helper1.toString());
+        System.out.println(helper2.toString());
+
+    }
+
+}
+
+class Helper<T, V> {
+
+    T name;
+    V number;
+
+    public Helper(T name, V number) {
+        this.name = name;
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Helper{" +
+                "name=" + name +
+                ", number=" + number +
+                '}';
+    }
+
+    public T getName() {
+        return name;
+    }
+
+    public void setName(T name) {
+        this.name = name;
+    }
+
+    public V getNumber() {
+        return number;
+    }
+
+    public void setNumber(V number) {
+        this.number = number;
+    }
+}
