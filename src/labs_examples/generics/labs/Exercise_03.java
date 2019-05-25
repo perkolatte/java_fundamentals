@@ -103,7 +103,7 @@ class genericMethods {
     }
 
     // 4)
-    public static <T extends Number, L extends List<T>> double largestElement(L list) {
+    public static <T extends Number> double largestElement(List<T> list) {
 
         double largest  = list.get(0).doubleValue();
 
