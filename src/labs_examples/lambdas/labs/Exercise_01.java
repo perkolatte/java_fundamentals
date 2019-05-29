@@ -1,5 +1,8 @@
 package labs_examples.lambdas.labs;
 
+import java.util.function.BiPredicate;
+import java.util.function.Function;
+
 /**
  * Lambdas Exercise 1:
  *
@@ -23,3 +26,68 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+
+class Exercise_01 {
+
+    public static void main(String[] args) {
+
+        // 2
+        funcInter1 funcLam2 = () -> {};
+        funcLam2.doNothing();
+
+        funcInter1 funcAnon = new funcInter1() {
+            @Override
+            public void doNothing() {}
+        };
+        funcAnon.doNothing();
+
+        // 4
+        funcInter2 funcLam4 = a -> a;
+        funcLam4.doNothing("nothing here");
+
+        funcInter2 funcAI4 = new funcInter2() {
+            @Override
+            public Object doNothing(Object input) {
+                return input;
+            }
+        };
+
+        // 6
+        funcInter5 funcLam6 = (name, number) -> name + " is cat number " + number + ".";
+        funcLam6.makeLabel("Whiskers", 9);
+
+        funcInter5 funcAI6 = new funcInter5() {
+            @Override
+            public String makeLabel(String name, int number) {
+                return name + " is cat number " + number + ".";
+            }
+        };
+
+        // 7
+        BiPredicate<Integer, Integer> isSameInt = (a, b) -> a == b;
+        isSameInt.test(9, 9);
+
+        Function<Integer, Integer> addOne = (a) -> a + 1;
+        addOne.apply(99);
+
+    }
+
+}
+
+// 1
+@FunctionalInterface
+interface funcInter1 {
+    public void doNothing();
+}
+
+// 3
+@FunctionalInterface
+interface funcInter2<T>{
+    public T doNothing(T input);
+}
+
+// 5
+@FunctionalInterface
+interface funcInter5 {
+    public String makeLabel(String name, int number);
+}
