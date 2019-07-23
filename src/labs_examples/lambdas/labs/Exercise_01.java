@@ -32,31 +32,29 @@ class Exercise_01 {
     public static void main(String[] args) {
 
         // 2
-        funcInter1 funcLam2 = () -> {};
+        FuncInter1 funcLam2 = () -> {};
         funcLam2.doNothing();
 
-        funcInter1 funcAnon = new funcInter1() {
+        FuncInter1 funcAnon = new FuncInter1() {
             @Override
             public void doNothing() {}
         };
         funcAnon.doNothing();
 
         // 4
-        funcInter2 funcLam4 = a -> a;
+        FuncInter2 funcLam4 = a -> a;
         funcLam4.doNothing("nothing here");
 
-        funcInter2 funcAI4 = new funcInter2() {
+        FuncInter2 funcAI4 = new FuncInter2() {
             @Override
-            public Object doNothing(Object input) {
-                return input;
-            }
+            public Object doNothing(Object input) { return input; }
         };
 
         // 6
-        funcInter5 funcLam6 = (name, number) -> name + " is cat number " + number + ".";
+        FuncInter5 funcLam6 = (name, number) -> name + " is cat number " + number + ".";
         funcLam6.makeLabel("Whiskers", 9);
 
-        funcInter5 funcAI6 = new funcInter5() {
+        FuncInter5 funcAI6 = new FuncInter5() {
             @Override
             public String makeLabel(String name, int number) {
                 return name + " is cat number " + number + ".";
@@ -76,18 +74,18 @@ class Exercise_01 {
 
 // 1
 @FunctionalInterface
-interface funcInter1 {
+interface FuncInter1 {
     public void doNothing();
 }
 
 // 3
 @FunctionalInterface
-interface funcInter2<T>{
+interface FuncInter2<T>{
     public T doNothing(T input);
 }
 
 // 5
 @FunctionalInterface
-interface funcInter5 {
+interface FuncInter5 {
     public String makeLabel(String name, int number);
 }
