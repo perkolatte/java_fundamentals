@@ -1,5 +1,7 @@
 package labs_examples.datastructures.queue.labs;
 
+import java.util.Queue;
+
 /**
  *      Queues - Exercise_02
  *
