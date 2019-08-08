@@ -15,17 +15,24 @@ public class CustomQueueController {
 
         System.out.println("number of people: " + people.size() + "\n");
 
-        System.out.println("last person in line: " + people.peekLast());
-        System.out.println("first person in line: " + people.peekFirst() + "\n");
+        try {
+            System.out.println("first person in line: " + people.peekFirst() + "\n");
+        } catch (QueueEmpty_Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("last person in line: " + people.peekLast());
+        } catch (QueueEmpty_Exception e) {
+            e.printStackTrace();
+        }
 
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
-        System.out.println(people.pop() + " removed from the beginning of the queue\n");
+        for (int i = 7; i > 0; i--) {
+            try {
+                System.out.println(people.pop() + " removed from the beginning of the queue\n");
+            } catch (QueueEmpty_Exception e) {
+                e.printStackTrace(System.out);
+            }
+        }
 
     }
-
 }

@@ -27,7 +27,7 @@ public class CustomQueue <T>{
      *
      * @return Removed object
      */
-    public Object pop() {
+    public Object pop() throws QueueEmpty_Exception {
         if (!this.isEmpty()) {
             Object popped = queueArray[frontIndex];
             frontIndex -= 1;
@@ -35,7 +35,7 @@ public class CustomQueue <T>{
             System.out.println(this.toString());
             return popped;
         } else {
-            return null;
+            return null; //unreachable
         }
     }
 
@@ -43,11 +43,11 @@ public class CustomQueue <T>{
      *
      * @return Initial object added to the queue (first in line)
      */
-    public Object peekFirst() {
+    public Object peekFirst() throws QueueEmpty_Exception {
             if (!this.isEmpty()) {
                 return queueArray[frontIndex];
             } else {
-                return null;
+                return null; //unreachable
             }
     }
 
@@ -55,11 +55,11 @@ public class CustomQueue <T>{
      *
      * @return Most recent object added to the queue (last in line)
      */
-    public Object peekLast() {
+    public Object peekLast() throws QueueEmpty_Exception {
         if (!this.isEmpty()) {
             return queueArray[0];
         } else {
-            return null;
+            return null; //unreachable
         }
     }
 
@@ -107,16 +107,11 @@ public class CustomQueue <T>{
         return frontIndex + 1;
     }
 
-    public boolean isEmpty() {
-        try {
-            if (frontIndex == -1) {
-                throw new StackEmpty_Exception("There is nothing in the queue");
-            } else {
-                return false;
-            }
-        } catch (StackEmpty_Exception e) {
-            e.printStackTrace();
-            return true;
+    public boolean isEmpty() throws QueueEmpty_Exception {
+        if (frontIndex == -1) {
+            throw new QueueEmpty_Exception("There is nothing in the queue");
+        } else {
+            return false;
         }
     }
 
