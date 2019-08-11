@@ -14,52 +14,52 @@ public class Exercise_03 {
 
             LinkedList<Integer> linkedList = new LinkedList<>();
 
-            long linkedList_add100_start = System.nanoTime();
+            long linkedList_add10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     linkedList.add(i);
                 }
             }
-            long linkedList_add100_stop = System.nanoTime();
+            long linkedList_add10000_stop = System.nanoTime();
 
-            double linkedList_add100_time = (double) (linkedList_add100_stop - linkedList_add100_start) / 1_000_000.0;
-            System.out.println("linkedList_add100_time: " + linkedList_add100_time + " milliseconds");
+            double linkedList_add10000_time = (double) (linkedList_add10000_stop - linkedList_add10000_start) / 1_000_000.0;
+            System.out.println("linkedList_add10000_time: " + linkedList_add10000_time + " milliseconds");
 
 
-            long linkedList_update100_start = System.nanoTime();
+            long linkedList_update10000_start = System.nanoTime();
             {
                 for (int i = 99, j = 0; i > -1; i--, j++) {
                     linkedList.set(j, i);
                 }
             }
-            long linkedList_update100_stop = System.nanoTime();
+            long linkedList_update10000_stop = System.nanoTime();
 
-            double linkedList_update100_time = (double) (linkedList_update100_stop - linkedList_update100_start) / 1_000_000.0;
-            System.out.println("linkedList_update100_time: " + linkedList_update100_time + " milliseconds");
+            double linkedList_update10000_time = (double) (linkedList_update10000_stop - linkedList_update10000_start) / 1_000_000.0;
+            System.out.println("linkedList_update10000_time: " + linkedList_update10000_time + " milliseconds");
 
 
-            long linkedList_search100_start = System.nanoTime();
+            long linkedList_search10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     linkedList.indexOf(i);
                 }
             }
-            long linkedList_search100_stop = System.nanoTime();
+            long linkedList_search10000_stop = System.nanoTime();
 
-            double linkedList_search100_time = (double) (linkedList_search100_stop - linkedList_search100_start) / 1_000_000.0;
-            System.out.println("linkedList_search100_time: " + linkedList_search100_time + " milliseconds");
+            double linkedList_search10000_time = (double) (linkedList_search10000_stop - linkedList_search10000_start) / 1_000_000.0;
+            System.out.println("linkedList_search10000_time: " + linkedList_search10000_time + " milliseconds");
 
 
-            long linkedList_delete100_start = System.nanoTime();
+            long linkedList_delete10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     linkedList.remove((Object) i);
                 }
             }
-            long linkedList_delete100_stop = System.nanoTime();
+            long linkedList_delete10000_stop = System.nanoTime();
 
-            double linkedList_delete100_time = (double) (linkedList_delete100_stop - linkedList_delete100_start) / 1_000_000.0;
-            System.out.println("linkedList_delete100_time: " + linkedList_delete100_time + " milliseconds");
+            double linkedList_delete10000_time = (double) (linkedList_delete10000_stop - linkedList_delete10000_start) / 1_000_000.0;
+            System.out.println("linkedList_delete10000_time: " + linkedList_delete10000_time + " milliseconds");
 
         }
         long linkedList_total_stop = System.nanoTime();
@@ -73,52 +73,52 @@ public class Exercise_03 {
         {
             Stack<Integer> stack = new Stack<>();
 
-            long stack_add100_start = System.nanoTime();
+            long stack_add10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     stack.add(i);
                 }
             }
-            long stack_add100_stop = System.nanoTime();
+            long stack_add10000_stop = System.nanoTime();
 
-            double stack_add100_time = (double) (stack_add100_stop - stack_add100_start) / 1_000_000.0;
-            System.out.println("stack_add100_time: " + stack_add100_time + " milliseconds");
+            double stack_add10000_time = (double) (stack_add10000_stop - stack_add10000_start) / 1_000_000.0;
+            System.out.println("stack_add10000_time: " + stack_add10000_time + " milliseconds");
 
 
-            long stack_update100_start = System.nanoTime();
+            long stack_update10000_start = System.nanoTime();
             {
                 for (int i = 99, j = 0; i > -1; i--, j++) {
                     stack.set(j, i);
                 }
             }
-            long stack_update100_stop = System.nanoTime();
+            long stack_update10000_stop = System.nanoTime();
 
-            double stack_update100_time = (double) (stack_update100_stop - stack_update100_start) / 1_000_000.0;
-            System.out.println("stack_update100_time: " + stack_update100_time + " milliseconds");
+            double stack_update10000_time = (double) (stack_update10000_stop - stack_update10000_start) / 1_000_000.0;
+            System.out.println("stack_update10000_time: " + stack_update10000_time + " milliseconds");
 
 
-            long stack_search100_start = System.nanoTime();
+            long stack_search10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     stack.indexOf(i);
                 }
             }
-            long stack_search100_stop = System.nanoTime();
+            long stack_search10000_stop = System.nanoTime();
 
-            double stack_search100_time = (double) (stack_search100_stop - stack_search100_start) / 1_000_000.0;
-            System.out.println("stack_search100_time: " + stack_search100_time + " milliseconds");
+            double stack_search10000_time = (double) (stack_search10000_stop - stack_search10000_start) / 1_000_000.0;
+            System.out.println("stack_search10000_time: " + stack_search10000_time + " milliseconds");
 
 
-            long stack_delete100_start = System.nanoTime();
+            long stack_delete10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     stack.remove((Object) i);
                 }
             }
-            long stack_delete100_stop = System.nanoTime();
+            long stack_delete10000_stop = System.nanoTime();
 
-            double stack_delete100_time = (double) (stack_delete100_stop - stack_delete100_start) / 1_000_000.0;
-            System.out.println("stack_delete100_time: " + stack_delete100_time + " milliseconds");
+            double stack_delete10000_time = (double) (stack_delete10000_stop - stack_delete10000_start) / 1_000_000.0;
+            System.out.println("stack_delete10000_time: " + stack_delete10000_time + " milliseconds");
         }
         long stack_total_stop = System.nanoTime();
 
@@ -131,52 +131,52 @@ public class Exercise_03 {
         {
             Stack<Integer> priorityQueue = new Stack<>();
 
-            long priorityQueue_add100_start = System.nanoTime();
+            long priorityQueue_add10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     priorityQueue.add(i);
                 }
             }
-            long priorityQueue_add100_stop = System.nanoTime();
+            long priorityQueue_add10000_stop = System.nanoTime();
 
-            double priorityQueue_add100_time = (double) (priorityQueue_add100_stop - priorityQueue_add100_start) / 1_000_000.0;
-            System.out.println("priorityQueue_add100_time: " + priorityQueue_add100_time + " milliseconds");
+            double priorityQueue_add10000_time = (double) (priorityQueue_add10000_stop - priorityQueue_add10000_start) / 1_000_000.0;
+            System.out.println("priorityQueue_add10000_time: " + priorityQueue_add10000_time + " milliseconds");
 
 
-            long priorityQueue_update100_start = System.nanoTime();
+            long priorityQueue_update10000_start = System.nanoTime();
             {
                 for (int i = 99, j = 0; i > -1; i--, j++) {
                     priorityQueue.set(j, i);
                 }
             }
-            long priorityQueue_update100_stop = System.nanoTime();
+            long priorityQueue_update10000_stop = System.nanoTime();
 
-            double priorityQueue_update100_time = (double) (priorityQueue_update100_stop - priorityQueue_update100_start) / 1_000_000.0;
-            System.out.println("priorityQueue_update100_time: " + priorityQueue_update100_time + " milliseconds");
+            double priorityQueue_update10000_time = (double) (priorityQueue_update10000_stop - priorityQueue_update10000_start) / 1_000_000.0;
+            System.out.println("priorityQueue_update10000_time: " + priorityQueue_update10000_time + " milliseconds");
 
 
-            long priorityQueue_search100_start = System.nanoTime();
+            long priorityQueue_search10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     priorityQueue.indexOf(i);
                 }
             }
-            long priorityQueue_search100_stop = System.nanoTime();
+            long priorityQueue_search10000_stop = System.nanoTime();
 
-            double priorityQueue_search100_time = (double) (priorityQueue_search100_stop - priorityQueue_search100_start) / 1_000_000.0;
-            System.out.println("priorityQueue_search100_time: " + priorityQueue_search100_time + " milliseconds");
+            double priorityQueue_search10000_time = (double) (priorityQueue_search10000_stop - priorityQueue_search10000_start) / 1_000_000.0;
+            System.out.println("priorityQueue_search10000_time: " + priorityQueue_search10000_time + " milliseconds");
 
 
-            long priorityQueue_delete100_start = System.nanoTime();
+            long priorityQueue_delete10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     priorityQueue.remove((Object) i);
                 }
             }
-            long priorityQueue_delete100_stop = System.nanoTime();
+            long priorityQueue_delete10000_stop = System.nanoTime();
 
-            double priorityQueue_delete100_time = (double) (priorityQueue_delete100_stop - priorityQueue_delete100_start) / 1_000_000.0;
-            System.out.println("priorityQueue_delete100_time: " + priorityQueue_delete100_time + " milliseconds");
+            double priorityQueue_delete10000_time = (double) (priorityQueue_delete10000_stop - priorityQueue_delete10000_start) / 1_000_000.0;
+            System.out.println("priorityQueue_delete10000_time: " + priorityQueue_delete10000_time + " milliseconds");
         }
         long priorityQueue_total_stop = System.nanoTime();
 
@@ -189,52 +189,52 @@ public class Exercise_03 {
         {
             Stack<Integer> hashMap = new Stack<>();
 
-            long hashMap_add100_start = System.nanoTime();
+            long hashMap_add10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     hashMap.add(i);
                 }
             }
-            long hashMap_add100_stop = System.nanoTime();
+            long hashMap_add10000_stop = System.nanoTime();
 
-            double hashMap_add100_time = (double) (hashMap_add100_stop - hashMap_add100_start) / 1_000_000.0;
-            System.out.println("hashMap_add100_time: " + hashMap_add100_time + " milliseconds");
+            double hashMap_add10000_time = (double) (hashMap_add10000_stop - hashMap_add10000_start) / 1_000_000.0;
+            System.out.println("hashMap_add10000_time: " + hashMap_add10000_time + " milliseconds");
 
 
-            long hashMap_update100_start = System.nanoTime();
+            long hashMap_update10000_start = System.nanoTime();
             {
                 for (int i = 99, j = 0; i > -1; i--, j++) {
                     hashMap.set(j, i);
                 }
             }
-            long hashMap_update100_stop = System.nanoTime();
+            long hashMap_update10000_stop = System.nanoTime();
 
-            double hashMap_update100_time = (double) (hashMap_update100_stop - hashMap_update100_start) / 1_000_000.0;
-            System.out.println("hashMap_update100_time: " + hashMap_update100_time + " milliseconds");
+            double hashMap_update10000_time = (double) (hashMap_update10000_stop - hashMap_update10000_start) / 1_000_000.0;
+            System.out.println("hashMap_update10000_time: " + hashMap_update10000_time + " milliseconds");
 
 
-            long hashMap_search100_start = System.nanoTime();
+            long hashMap_search10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     hashMap.indexOf(i);
                 }
             }
-            long hashMap_search100_stop = System.nanoTime();
+            long hashMap_search10000_stop = System.nanoTime();
 
-            double hashMap_search100_time = (double) (hashMap_search100_stop - hashMap_search100_start) / 1_000_000.0;
-            System.out.println("hashMap_search100_time: " + hashMap_search100_time + " milliseconds");
+            double hashMap_search10000_time = (double) (hashMap_search10000_stop - hashMap_search10000_start) / 1_000_000.0;
+            System.out.println("hashMap_search10000_time: " + hashMap_search10000_time + " milliseconds");
 
 
-            long hashMap_delete100_start = System.nanoTime();
+            long hashMap_delete10000_start = System.nanoTime();
             {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     hashMap.remove((Object) i);
                 }
             }
-            long hashMap_delete100_stop = System.nanoTime();
+            long hashMap_delete10000_stop = System.nanoTime();
 
-            double hashMap_delete100_time = (double) (hashMap_delete100_stop - hashMap_delete100_start) / 1_000_000.0;
-            System.out.println("hashMap_delete100_time: " + hashMap_delete100_time + " milliseconds");
+            double hashMap_delete10000_time = (double) (hashMap_delete10000_stop - hashMap_delete10000_start) / 1_000_000.0;
+            System.out.println("hashMap_delete10000_time: " + hashMap_delete10000_time + " milliseconds");
         }
         long hashMap_total_stop = System.nanoTime();
 

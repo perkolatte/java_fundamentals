@@ -1,0 +1,23 @@
+linkedList_add10000_time: 1.557287 milliseconds
+linkedList_update10000_time: 0.144672 milliseconds
+linkedList_search10000_time: 107.362497 milliseconds
+linkedList_delete10000_time: 0.882061 milliseconds
+linkedList_total_time: 112.433871 milliseconds
+
+stack_add10000_time: 0.815787 milliseconds
+stack_update10000_time: 0.023073 milliseconds
+stack_search10000_time: 37.418058 milliseconds
+stack_delete10000_time: 6.335771 milliseconds
+stack_total_time: 44.865898 milliseconds
+
+priorityQueue_add10000_time: 0.444323 milliseconds
+priorityQueue_update10000_time: 0.02598 milliseconds
+priorityQueue_search10000_time: 31.475557 milliseconds
+priorityQueue_delete10000_time: 2.840831 milliseconds
+priorityQueue_total_time: 35.01454 milliseconds
+
+hashMap_add10000_time: 0.435388 milliseconds
+hashMap_update10000_time: 0.013546 milliseconds
+hashMap_search10000_time: 42.084554 milliseconds
+hashMap_delete10000_time: 4.859852 milliseconds
+hashMap_total_time: 47.858235 milliseconds
